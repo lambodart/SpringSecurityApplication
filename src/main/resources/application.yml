@@ -1,0 +1,13 @@
+spring:
+      security:
+              user:
+                  name: admin
+                  password: admin
+
+
+
+
+
+
+
+
