@@ -22,4 +22,9 @@ public class ContentController {
 	public String aboutPage() {
 		return "home_user";
 	}
+	
+	@GetMapping("/login")
+	public String login() {
+		return "custom";
+	}
 }

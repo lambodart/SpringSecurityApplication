@@ -11,7 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 public class SpringSecurityAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringSecurityAppApplication.class, args);
+		SpringApplication.run(SpringSecurityAppApplication.class, args); 
 	}
 
 }

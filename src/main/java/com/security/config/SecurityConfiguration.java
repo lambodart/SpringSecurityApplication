@@ -69,8 +69,12 @@ public class SecurityConfiguration {
 			reg.requestMatchers("/user/**").hasRole("USER");	// only user can access
 			reg.anyRequest().authenticated();					// other than above any request come its authentication
 		})
-		.formLogin(formlogin -> formlogin.permitAll());
-		
+		//.formLogin(formlogin -> formlogin.permitAll());
+		.formLogin(httpsecurityform -> {
+			httpsecurityform.loginPage("/login")
+			.successHandler(new AuthenticationSuccessHandler()) 
+			.permitAll();
+		});
 		return httpSecurity.build();
 	}
 }
